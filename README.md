@@ -67,6 +67,8 @@ Each person runs the client on their own machine with their own Azure sign-in, s
 ## Project structure
 
 ```
+agent/
+└── tecnun-study-coach.yaml   # agent definition exported from Foundry (version 10)
 src/tecnun_coach/
 ├── agent.py        # authentication and conversation with the agent
 ├── cli.py          # terminal chat
