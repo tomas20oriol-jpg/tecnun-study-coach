@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "tecnun-study-coach"
+version = "0.1.0"
+description = "Terminal and web client for the tecnun-study-coach Foundry agent"
+authors = ["Tomás Oriol Freixa"]
+readme = "README.md"
+packages = [{ include = "tecnun_coach", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+azure-ai-projects = ">=2.0.0"
+azure-identity = "*"
+openai = "*"
+python-dotenv = "*"
+flask = "*"
+
+[tool.poetry.scripts]
+coach = "tecnun_coach.cli:main"
+coach-web = "tecnun_coach.web:main"
+coach-test = "tecnun_coach.smoke_test:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
